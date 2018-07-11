@@ -6,7 +6,7 @@
     "scripts": {
         "build": "webpack --mode production",
         "dev": "webpack-dev-server",
-        "sass": "node-sass src/abc.scss dist/min.css --watch"
+        "sass": "node-sass src/sass/main.scss src/project-files/dist/style.css --watch"
     },
     "keywords": [],
     "author": "",

@@ -7,11 +7,11 @@ module.exports = {
     //entry: ['babel-polyfill', './src/index.js'],
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname+"/src/project-files", 'dist'),
         filename: '[name].bundle.js'
     },
     devServer: {
-        contentBase: './dist'
+        contentBase: './src/project-files/dist'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -33,7 +33,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {
-                from: 'src/project-files/Images',
+                from: 'src/project-files/img',
                 to: 'Images'
             }
         ])
