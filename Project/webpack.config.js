@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    //entry: ['babel-polyfill', './src/index.js'],
+    entry: [/*/'babel-polyfill',/*/ './src/index.js'],
 
     output: {
         path: path.resolve(__dirname+"/src/project-files", 'dist'),

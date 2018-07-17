@@ -5,7 +5,7 @@
     "private": true,
     "scripts": {
         "build": "webpack --mode production",
-        "dev": "webpack-dev-server",
+        "dev": "webpack-dev-server --mode development",
         "sass": "node-sass src/sass/main.scss src/project-files/dist/style.css --watch"
     },
     "keywords": [],
