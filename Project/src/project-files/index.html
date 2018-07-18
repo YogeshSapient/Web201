@@ -12,26 +12,45 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
     <title>Order Food Online & Get Healthy Food Delivery Near You | Eat.Fit</title>
+    <script>
+        $(document).ready(function() {
+
+            $('ul.tabs li').click(function() {
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+            })
+
+        })
+    </script>
+
 </head>
 
 <body>
+    <!-- Start Header -->
     <header class="top-header">
-
         <div class="column column1">
             <img src="Images/logo.png" alt="Logo">
         </div>
-
         <div class="column column2">
-            <ul>
-                <li><a href="default.asp">Home</a></li>
-                <li><a href="news.asp">News</a></li>
-                <li><a href="contact.asp">Contact</a></li>
-                <li><a href="about.asp">About</a></li>
-            </ul>
+            
+            <div class="menu__navigation">
+                <ul class="menur__list">
+                    <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Cart</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">  Privacy policy</a></li>
+                </ul>
+            </div>
         </div>
-
     </header>
+    <!-- Start carousel -->
     <section class="carousel">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -69,70 +88,576 @@
         </div>
 
     </section>
+    <!-- Start main section -->
     <main>
         <section class="section-about">
-            <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary">
-                    Exciting tours for adventurous people
-                </h2>
+          
+
+            <div class="row">
+                <div class="container">
+
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-1">Breakfast</li>
+                        <li class="tab-link" data-tab="tab-2">Lunch</li>
+                        <li class="tab-link" data-tab="tab-3">Snacks</li>
+                        <li class="tab-link" data-tab="tab-4">Dinner</li>
+                    </ul>
+
+                    <div id="tab-1" class="tab-content current">
+                        <div class="row">
+                            <div class="col-1-of-4">
+                                <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                                <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                         <div class="row">
+                            <div class="col-1-of-4">
+                                <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                                <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div id="tab-2" class="tab-content">
+                       <div class="row">
+                            <div class="col-1-of-4">
+                                <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                                <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-content">
+                        <div class="row">
+                            <div class="col-1-of-4">
+                                <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="tab-4" class="tab-content">
+                        <div class="row">
+                            <div class="col-1-of-4">
+                                <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-4">
+                               <!-- Product Div -->
+                                <div class="card card-desktop">
+                                    <div class="top-half">
+                                        <img src="Images/FoodImages/1.jpg">
+                                    </div>
+                                    <div class="bottom-half">
+                                        <div>
+                                            <div class="image-box">
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="mrp">₹ 180</div>
+                                                </div>
+                                                <div class="price original">
+                                                    <div class="validity">
+                                                        <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                                    </div>
+                                                    <div class="offer-price">₹ 99</div>
+                                                </div>
+                                            </div>
+                                            <div class="last-line">
+                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1-of-4">
+                              
+                            </div>
+                            <div class="col-1-of-4">
+                               
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- container -->
             </div>
 
             <div class="row">
-                <div class="col-1-of-2">
-                    <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
-                    <p class="paragraph">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                    </p>
-
-                    <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like you never have before</h3>
-                    <p class="paragraph">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
-                    </p>
-
-                    <a href="#" class="btn-text">Learn more &rarr;</a>
-                </div>
-                <div class="col-1-of-2">
-                    <div class="composition">
-
-                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 1" class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg">
-
-                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 2" class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg">
-
-                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="Photo 3" class="composition__photo composition__photo--p3" src="img/nat-3-large.jpg">
-
-                        <!--
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
-                            -->
-                    </div>
-                </div>
             </div>
+
         </section>
 
 
     </main>
-
+ 
+    <!-- Start Footer -->
     <footer class="footer">
-
-        <div class="row">
-            <div class="col-1-of-2">
-                <div class="footer__navigation">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-
+        <div class="footer__navigation">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Cart</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+            </ul>
         </div>
     </footer>
-
-
-
 </body>
 
 </html>
