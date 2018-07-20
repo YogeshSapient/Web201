@@ -30,6 +30,7 @@
         "webpack-merge": "^4.1.3"
     },
     "dependencies": {
-        "babel-polyfill": "^6.26.0"
+        "babel-polyfill": "^6.26.0",
+        "handlebars-group-by": "^1.0.1"
     }
 }

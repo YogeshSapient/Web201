@@ -14,8 +14,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+
+
     <title>Order Food Online & Get Healthy Food Delivery Near You | Eat.Fit</title>
     <script>
+        //Code for tab functionality
         $(document).ready(function() {
 
             $('ul.tabs li').click(function() {
@@ -90,14 +94,10 @@
     <!-- Start main section -->
     <main>
         <section class="section-about">
-            <div class="u-center-text u-margin-bottom-big">
-                <h2 class="heading-secondary">
-                    Exciting tours for adventurous people
-                </h2>
-            </div>
-
 
             <div class="row">
+                <!-- entry-template for  Breakfast-->
+
                 <div class="container">
 
                     <ul class="tabs">
@@ -107,72 +107,39 @@
                         <li class="tab-link" data-tab="tab-4">Dinner</li>
                     </ul>
 
+                    <!-- Tab1 -->
                     <div id="tab-1" class="tab-content current">
-                        <div class="row">
-                            <div class="col-1-of-4">
-                                
-                                <div class="card card-desktop">
-                                    <div class="top-half" style="opacity: 1; min-height: 175.439px;">
-                                        <img src="Images/FoodImages/1.jpg">
-                                    </div>
-                                    <div class="bottom-half">
-                                        <div style="height: 100%; display: flex; flex-direction: column;">
-                                            <div style="padding: 0px 10px;">
-                                                <div>
-                                                    <div class="price original">
-                                                        <div class="validity">
-                                                            <div class="LinesEllipsis LinesEllipsis--clamped ">Patta Gobi Mattar, Baked Lauki<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
-                                                        </div>
-                                                        <div class="mrp">₹ 180</div>
-                                                    </div>
-                                                    
-                                                     <div class="price original">
-                                                        <div class="validity">
-                                                            <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
-                                                        </div>
-                                                        <div class="offer-price">₹ 99</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                           
-                                            <div class="last-line">
-                                                <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                            </div>
 
-                            <div class="col-1-of-4">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                            <div class="col-1-of-4">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-                            <div class="col-1-of-4">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </div>
-
+                        <div class="row" id=breakfast>
                         </div>
 
-
                     </div>
+                    <!-- Tab2 -->
                     <div id="tab-2" class="tab-content">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                        <div class="row" id="lunch">
+                        </div>
+
                     </div>
+                    <!-- Tab3 -->
                     <div id="tab-3" class="tab-content">
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    </div>
-                    <div id="tab-4" class="tab-content">
-                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                        <div class="row" id="snacks">
+                        </div>
+
                     </div>
 
+                    <!-- Tab4 -->
+                    <div id="tab-4" class="tab-content">
+
+                        <div class="row" id="dinner">
+                        </div>
+
+                    </div>
                 </div>
-                <!-- container -->
             </div>
+
+
 
             <div class="row">
             </div>
@@ -181,6 +148,7 @@
 
 
     </main>
+
     <!-- Start Footer -->
     <footer class="footer">
         <div class="footer__navigation">
@@ -191,6 +159,274 @@
             </ul>
         </div>
     </footer>
+    
+    <!-- Start entry-BreakfastTemplate -->
+    <script id="entry-BreakfastTemplate" type="text/x-handlebars-template">
+        {{#each list}} {{#if-equals this "1"}}
+        <div class="col-1-of-4">
+            <!-- Product Div -->
+            <div class="card card-desktop">
+                <div class="top-half">
+                    <img src="{{foodImage}}">
+                </div>
+                <div class="bottom-half">
+                    <div>
+                        <div class="image-box">
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="mrp">₹ {{foodPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="last-line">
+                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if-equals}} {{/each}}
+    </script>
+
+    <!-- Start entry-LunchTemplate -->
+    <script id="entry-LunchTemplate" type="text/x-handlebars-template">
+        {{#each list}} {{#if-equals this "2"}}
+        <div class="col-1-of-4">
+            <!-- Product Div -->
+            <div class="card card-desktop">
+                <div class="top-half">
+                    <img src="{{foodImage}}">
+                </div>
+                <div class="bottom-half">
+                    <div>
+                        <div class="image-box">
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="mrp">₹ {{foodPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="last-line">
+                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if-equals}} {{/each}}
+    </script>
+    <!-- Start entry-SnacksTemplate -->
+    <script id="entry-SnacksTemplate" type="text/x-handlebars-template">
+        {{#each list}} {{#if-equals this "3"}}
+        <div class="col-1-of-4">
+            <!-- Product Div -->
+            <div class="card card-desktop">
+                <div class="top-half">
+                    <img src="{{foodImage}}">
+                </div>
+                <div class="bottom-half">
+                    <div>
+                        <div class="image-box">
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="mrp">₹ {{foodPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="last-line">
+                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if-equals}} {{/each}}
+    </script>
+    <!-- Start entry-DinnerTemplate -->
+    <script id="entry-DinnerTemplate" type="text/x-handlebars-template">
+        {{#each list}} {{#if-equals this "4"}}
+        <div class="col-1-of-4">
+            <!-- Product Div -->
+            <div class="card card-desktop">
+                <div class="top-half">
+                    <img src="{{foodImage}}">
+                </div>
+                <div class="bottom-half">
+                    <div>
+                        <div class="image-box">
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="mrp">₹ {{foodPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="last-line">
+                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if-equals}} {{/each}}
+    </script>
+    
+    
+    <script type="text/javascript">
+        Handlebars.registerHelper('if-equals', function(listItem, categoryID, options) {
+            if (listItem.categoryID === categoryID) {
+                return options.fn(this);
+            }
+        });
+
+
+
+
+        var context = {
+            list: [{
+                    categoryID: '1',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '1',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '1',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '1',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '1',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '1',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '2',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '3',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '3',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '3',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '4',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                },
+                {
+                    categoryID: '4',
+                    foodImage: 'Images/FoodImages/1.jpg',
+                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
+                    foodPrice: '180',
+                    foodOfferPrice: '99'
+                }
+            ]
+        };
+        var source = document.getElementById("entry-BreakfastTemplate").innerHTML;
+        var template = Handlebars.compile(source);
+        var html = template(context);
+        var div = document.createElement(div);
+        div.innerHTML = html;
+        document.getElementById("breakfast").appendChild(div);
+
+        var source1 = document.getElementById("entry-LunchTemplate").innerHTML;
+        var template1 = Handlebars.compile(source1);
+        var html1 = template1(context);
+        var lunch = document.createElement(lunch);
+        lunch.innerHTML = html1;
+        document.getElementById("lunch").appendChild(lunch);
+
+        var source2 = document.getElementById("entry-SnacksTemplate").innerHTML;
+        var template2 = Handlebars.compile(source2);
+        var html2 = template2(context);
+        var snacks = document.createElement(snacks);
+        snacks.innerHTML = html2;
+        document.getElementById("snacks").appendChild(snacks);
+
+
+        var source3 = document.getElementById("entry-DinnerTemplate").innerHTML;
+        var template3 = Handlebars.compile(source3);
+        var html3 = template3(context);
+        var dinner = document.createElement(dinner);
+        dinner.innerHTML = html3;
+        document.getElementById("dinner").appendChild(dinner);
+    </script>
+
+
 <script type="text/javascript" src="main.bundle.js"></script></body>
 
 </html>

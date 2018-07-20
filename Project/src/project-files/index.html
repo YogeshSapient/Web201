@@ -12,28 +12,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
-
-
     <title>Order Food Online & Get Healthy Food Delivery Near You | Eat.Fit</title>
-    <script>
-        //Code for tab functionality
-        $(document).ready(function() {
-
-            $('ul.tabs li').click(function() {
-                var tab_id = $(this).attr('data-tab');
-
-                $('ul.tabs li').removeClass('current');
-                $('.tab-content').removeClass('current');
-
-                $(this).addClass('current');
-                $("#" + tab_id).addClass('current');
-            })
-
-        })
-    </script>
 
 </head>
 
@@ -47,8 +27,8 @@
             <div class="menu__navigation">
                 <ul class="menur__list">
                     <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Cart</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">  Privacy policy</a></li>
+                    <li class="menu__item"><a href="orders.html" class="menu__link">Cart</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Privacy policy</a></li>
                 </ul>
             </div>
         </div>
@@ -97,40 +77,6 @@
 
             <div class="row">
                 <!-- entry-template for  Breakfast-->
-                <script id="entry-template" type="text/x-handlebars-template">
-                    {{#each list}}
-                    <div class="col-1-of-4">
-                        <!-- Product Div -->
-                        <div class="card card-desktop">
-                            <div class="top-half">
-                                <img src="Images/FoodImages/1.jpg">
-                            </div>
-                            <div class="bottom-half">
-                                <div>
-                                    <div class="image-box">
-                                        <div class="price original">
-                                            <div class="validity">
-                                                <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
-                                            </div>
-                                            <div class="mrp">₹ 180</div>
-                                        </div>
-                                        <div class="price original">
-                                            <div class="validity">
-                                                <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
-                                            </div>
-                                            <div class="offer-price">₹ 99</div>
-                                        </div>
-                                    </div>
-                                    <div class="last-line">
-                                        <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {{/each}}
-                </script>
 
                 <div class="container">
 
@@ -194,54 +140,142 @@
         </div>
     </footer>
 
+    <!-- Start entry-BreakfastTemplate -->
+    <script id="entry-BreakfastTemplate" type="text/x-handlebars-template">
+        {{#each list}} {{#if-equals this "1"}}
+        <div class="col-1-of-4">
+            <!-- Product Div -->
+            <div class="card card-desktop">
+                <div class="top-half">
+                    <img src="{{foodImage}}">
+                </div>
+                <div class="bottom-half">
+                    <div>
+                        <div class="image-box">
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="mrp">₹ {{foodPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="last-line">
+                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if-equals}} {{/each}}
+    </script>
 
-    <script type="text/javascript">
-        var source = document.getElementById("entry-template").innerHTML;
-        var template = Handlebars.compile(source);
-
-        var context = {
-            list: [{
-                    foodImage: 'Images/FoodImages/1.jpg',
-                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
-                    foodPrice: '180',
-                    foodOfferPrice: '99'
-                },
-                {
-                    foodImage: 'Images/FoodImages/1.jpg',
-                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
-                    foodPrice: '180',
-                    foodOfferPrice: '99'
-                },
-                {
-                    foodImage: 'Images/FoodImages/1.jpg',
-                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
-                    foodPrice: '180',
-                    foodOfferPrice: '99'
-                },
-                {
-                    foodImage: 'Images/FoodImages/1.jpg',
-                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
-                    foodPrice: '180',
-                    foodOfferPrice: '99'
-                },
-                {
-                    foodImage: 'Images/FoodImages/1.jpg',
-                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
-                    foodPrice: '180',
-                    foodOfferPrice: '99'
-                },
-                {
-                    foodImage: 'Images/FoodImages/1.jpg',
-                    foodName: 'Patta Gobi Mattar, Baked Lauki.',
-                    foodPrice: '180',
-                    foodOfferPrice: '99'
-                }
-            ]
-        };
-        var html = template(context);
-        var div = document.createElement(div);
-        div.innerHTML = html;
-        document.getElementById("breakfast").appendChild(div);
+    <!-- Start entry-LunchTemplate -->
+    <script id="entry-LunchTemplate" type="text/x-handlebars-template">
+        {{#each list}} {{#if-equals this "2"}}
+        <div class="col-1-of-4">
+            <!-- Product Div -->
+            <div class="card card-desktop">
+                <div class="top-half">
+                    <img src="{{foodImage}}">
+                </div>
+                <div class="bottom-half">
+                    <div>
+                        <div class="image-box">
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="mrp">₹ {{foodPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="last-line">
+                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if-equals}} {{/each}}
+    </script>
+    <!-- Start entry-SnacksTemplate -->
+    <script id="entry-SnacksTemplate" type="text/x-handlebars-template">
+        {{#each list}} {{#if-equals this "3"}}
+        <div class="col-1-of-4">
+            <!-- Product Div -->
+            <div class="card card-desktop">
+                <div class="top-half">
+                    <img src="{{foodImage}}">
+                </div>
+                <div class="bottom-half">
+                    <div>
+                        <div class="image-box">
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="mrp">₹ {{foodPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="last-line">
+                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if-equals}} {{/each}}
+    </script>
+    <!-- Start entry-DinnerTemplate -->
+    <script id="entry-DinnerTemplate" type="text/x-handlebars-template">
+        {{#each list}} {{#if-equals this "4"}}
+        <div class="col-1-of-4">
+            <!-- Product Div -->
+            <div class="card card-desktop">
+                <div class="top-half">
+                    <img src="{{foodImage}}">
+                </div>
+                <div class="bottom-half">
+                    <div>
+                        <div class="image-box">
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="mrp">₹ {{foodPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                </div>
+                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="last-line">
+                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/if-equals}} {{/each}}
     </script>
 
 

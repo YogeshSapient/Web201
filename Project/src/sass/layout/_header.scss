@@ -29,6 +29,7 @@
     margin-top: 63px;
 }
 
+
 .menu {
     padding: 2rem 0;
     font-size: 1.4rem;
@@ -41,7 +42,11 @@
             width: 100%;
             text-align: center;
         }
+        & button{
+            display: none;
+        }
     }
+    
 
     &__list {
         list-style: none;
