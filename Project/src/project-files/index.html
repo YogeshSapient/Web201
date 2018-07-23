@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    
     <title>Order Food Online & Get Healthy Food Delivery Near You | Eat.Fit</title>
 
 </head>
@@ -27,7 +28,7 @@
             <div class="menu__navigation">
                 <ul class="menur__list">
                     <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-                    <li class="menu__item"><a href="orders.html" class="menu__link">Cart</a></li>
+                  <li class="menu__item"><a href="orders.html" class="menu__link">Cart<span id="cartItem"></span></a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Privacy policy</a></li>
                 </ul>
             </div>
@@ -147,33 +148,35 @@
             <!-- Product Div -->
             <div class="card card-desktop">
                 <div class="top-half">
-                    <img src="{{foodImage}}">
+                    <img id="foodImage{{productID}}" src="{{foodImage}}">
                 </div>
                 <div class="bottom-half">
                     <div>
                         <div class="image-box">
                             <div class="price original">
                                 <div class="validity">
-                                    <div class="LinesEllipsis LinesEllipsis--clamped ">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                    <div class="LinesEllipsis LinesEllipsis--clamped" id="foodName{{productID}}">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
                                 </div>
-                                <div class="mrp">₹ {{foodPrice}}</div>
+                                <div class="mrp" id="foodPrice{{productID}}">₹ {{foodPrice}}</div>
                             </div>
                             <div class="price original">
                                 <div class="validity">
                                     <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
                                 </div>
-                                <div class="offer-price">₹ {{foodOfferPrice}}</div>
+                                <div class="offer-price" id="foodOfferPrice{{productID}}">₹ {{foodOfferPrice}}</div>
                             </div>
                         </div>
                         <div class="last-line">
-                            <div class="row margin0 buy-div"><button class="add-cart"><div>ADD TO CART</div></button></div>
+                            <div class="row margin0 buy-div"><button class="add-cart" id="{{productID}}">ADD TO CART</button></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         {{/if-equals}} {{/each}}
+ 
     </script>
+
 
     <!-- Start entry-LunchTemplate -->
     <script id="entry-LunchTemplate" type="text/x-handlebars-template">
