@@ -27,7 +27,7 @@
         <div class="column column2">
             <div class="menu__navigation">
                 <ul class="menur__list">
-                    <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
                   <li class="menu__item"><a href="orders.html" class="menu__link">Cart<span id="cartItem"></span></a></li>
                     <li class="menu__item"><a href="#" class="menu__link">Privacy policy</a></li>
                 </ul>
@@ -155,15 +155,21 @@
                         <div class="image-box">
                             <div class="price original">
                                 <div class="validity">
-                                    <div class="LinesEllipsis LinesEllipsis--clamped" id="foodName{{productID}}">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                    <div class="LinesEllipsis LinesEllipsis--clamped" id="foodName{{productID}}">{{foodName}}<wbr><span class="LinesEllipsis-ellipsis"></span></div>
                                 </div>
                                 <div class="mrp" id="foodPrice{{productID}}">₹ {{foodPrice}}</div>
                             </div>
                             <div class="price original">
                                 <div class="validity">
-                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis">...</span></div>
+                                    <div class="offer-price">Offer Price:<wbr><span class="LinesEllipsis-ellipsis"></span></div>
                                 </div>
                                 <div class="offer-price" id="foodOfferPrice{{productID}}">₹ {{foodOfferPrice}}</div>
+                            </div>
+                            <div class="price original">
+                                <div class="validity">
+                                    <div class="offer-price">Quantity:<wbr><span class="LinesEllipsis-ellipsis"></span></div>
+                                </div>
+                                <div class="offer-price" id="foodOfferPrice1"><input type="text" class="quantity-textbox" name="Quantity" value="1" id="quantity{{productID}}""> </div>
                             </div>
                         </div>
                         <div class="last-line">
