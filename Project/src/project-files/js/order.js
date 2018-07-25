@@ -13,7 +13,7 @@ for (var i in shoppintCart) {
     createMarkup(data, i);
 }
 localStorage.setItem('TotalAmount', JSON.stringify(TotalAmount));
-
+updateSubtotalPrice();
 function createMarkup(data, i) {
     $("#test").append(
         "<div class='card card-desktop'>" +
@@ -46,19 +46,21 @@ function Delete(e) {
     }
     localStorage.setItem('TotalAmount', JSON.stringify(TotalAmount));
     isCartEmpty(newshoppintCart);
+    updateSubtotalPrice();
 }
 
 function isCartEmpty(cart) {
 
     if (cart != null) {
         if (cart.length == 0) {
-             $('#Place-Order').hide();
+            $('#Place-Order').hide();
+
             $("#test").append(
                 "<div class='card card-desktop'>" + "<img class='emptycart-image' src='Images/emptyCart.PNG'>" +
                 "</div>");
         }
     } else if (cart == null) {
-         $('#Place-Order').hide();
+        $('#Place-Order').hide();
         $("#test").append(
             "<div class='card card-desktop'>" + "<img class='emptycart-image' src='Images/emptyCart.PNG'>" +
             "</div>");
@@ -97,4 +99,13 @@ function UpdateQuantity(e) {
     }
     localStorage.setItem('TotalAmount', JSON.stringify(TotalAmount));
 
+    updateSubtotalPrice();
+
+}
+
+function updateSubtotalPrice() {
+    if (localStorage.getItem('TotalAmount') != null) {
+        $('#SubtotalPrice').html("");
+        $('#SubtotalPrice').html("₹ " + localStorage.getItem('TotalAmount'));
+    }
 }

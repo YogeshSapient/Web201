@@ -189,3 +189,5 @@ if (window.location.pathname == "/index.html" || window.location.pathname == "/"
     dinner.innerHTML = html3;
     document.getElementById("dinner").appendChild(dinner);
 }
+
+
