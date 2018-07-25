@@ -26,7 +26,7 @@ function Add(id) {
     var foodImage = "#foodImage" + id;
     var foodName = "#foodName" + id;
     var foodPrice = "#foodPrice" + id;
-    var foodOfferPrice = "#foodName" + id;
+    var foodOfferPrice = "#foodOfferPrice" + id;
     var productID = id;
     var quantity = "#quantity" + id;
     var cart = JSON.stringify({
@@ -63,97 +63,97 @@ var context = {
     list: [{
             categoryID: '1',
             productID: '1',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
+            foodImage: 'Images/FoodImages/GobiMethi.JPG',
+            foodName: 'Gobi Methi Paranthas',
             foodPrice: '110',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '1',
             productID: '2',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
+            foodImage: 'Images/FoodImages/12.JPG',
+            foodName: 'Raisin Pop',
             foodPrice: '120',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '1',
             productID: '3',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
+            foodImage: 'Images/FoodImages/13.JPG',
+            foodName: 'Honey-Banana',
             foodPrice: '130',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '1',
             productID: '4',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
+            foodImage: 'Images/FoodImages/14.JPG',
+            foodName: 'Fruit Pop Oatmeal',
             foodPrice: '140',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '1',
             productID: '5',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar, Baked Lauki.',
+            foodImage: 'Images/FoodImages/15.JPG',
+            foodName: 'Nutty Dates',
             foodPrice: '150',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '1',
             productID: '6',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
+            foodImage: 'Images/FoodImages/16.JPG',
+            foodName: 'Peanut Butter',
             foodPrice: '160',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '2',
             productID: '7',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
+            foodImage: 'Images/FoodImages/21.JPG',
+            foodName: 'Punjabi Dal Tadka',
             foodPrice: '180',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '2',
             productID: '8',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar, Baked Lauki.',
+            foodImage: 'Images/FoodImages/22.JPG',
+            foodName: 'Chef Special Veg',
             foodPrice: '180',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '3',
             productID: '9',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
+            foodImage: 'Images/FoodImages/31.JPG',
+            foodName: 'Paneer Soy',
             foodPrice: '180',
             foodOfferPrice: '99'
                 },
         {
             categoryID: '3',
             productID: '10',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
-            foodPrice: '180',
-            foodOfferPrice: '99'
+            foodImage: 'Images/FoodImages/32.JPG',
+            foodName: 'Superfood Trail Mix',
+            foodPrice: '100',
+            foodOfferPrice: '69'
                 },
         {
             categoryID: '3',
             productID: '11',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
-            foodPrice: '180',
-            foodOfferPrice: '99'
+            foodImage: 'Images/FoodImages/33.JPG',
+            foodName: 'Signature Fruit Bowl',
+            foodPrice: '120',
+            foodOfferPrice: '69'
                 },
         {
             categoryID: '4',
             productID: '12',
-            foodImage: 'Images/FoodImages/1.jpg',
-            foodName: 'Patta Gobi Mattar',
-            foodPrice: '180',
+            foodImage: 'Images/FoodImages/41.JPG',
+            foodName: 'Ricotta Black Rice',
+            foodPrice: '270',
             foodOfferPrice: '99'
                 }
             ]
