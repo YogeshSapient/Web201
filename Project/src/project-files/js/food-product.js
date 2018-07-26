@@ -66,7 +66,7 @@ var context = {
             foodImage: 'Images/FoodImages/GobiMethi.JPG',
             foodName: 'Gobi Methi Paranthas',
             foodPrice: '110',
-            foodOfferPrice: '99'
+            foodOfferPrice: '100'
                 },
         {
             categoryID: '1',
@@ -74,7 +74,7 @@ var context = {
             foodImage: 'Images/FoodImages/12.JPG',
             foodName: 'Raisin Pop',
             foodPrice: '120',
-            foodOfferPrice: '99'
+            foodOfferPrice: '110'
                 },
         {
             categoryID: '1',
@@ -82,7 +82,7 @@ var context = {
             foodImage: 'Images/FoodImages/13.JPG',
             foodName: 'Honey-Banana',
             foodPrice: '130',
-            foodOfferPrice: '99'
+            foodOfferPrice: '120'
                 },
         {
             categoryID: '1',
@@ -90,7 +90,7 @@ var context = {
             foodImage: 'Images/FoodImages/14.JPG',
             foodName: 'Fruit Pop Oatmeal',
             foodPrice: '140',
-            foodOfferPrice: '99'
+            foodOfferPrice: '125'
                 },
         {
             categoryID: '1',
@@ -98,7 +98,7 @@ var context = {
             foodImage: 'Images/FoodImages/15.JPG',
             foodName: 'Nutty Dates',
             foodPrice: '150',
-            foodOfferPrice: '99'
+            foodOfferPrice: '130'
                 },
         {
             categoryID: '1',
@@ -106,7 +106,7 @@ var context = {
             foodImage: 'Images/FoodImages/16.JPG',
             foodName: 'Peanut Butter',
             foodPrice: '160',
-            foodOfferPrice: '99'
+            foodOfferPrice: '140'
                 },
         {
             categoryID: '2',
@@ -114,15 +114,15 @@ var context = {
             foodImage: 'Images/FoodImages/21.JPG',
             foodName: 'Punjabi Dal Tadka',
             foodPrice: '180',
-            foodOfferPrice: '99'
+            foodOfferPrice: '150'
                 },
         {
             categoryID: '2',
             productID: '8',
             foodImage: 'Images/FoodImages/22.JPG',
             foodName: 'Chef Special Veg',
-            foodPrice: '180',
-            foodOfferPrice: '99'
+            foodPrice: '185',
+            foodOfferPrice: '155'
                 },
         {
             categoryID: '3',
@@ -130,7 +130,7 @@ var context = {
             foodImage: 'Images/FoodImages/31.JPG',
             foodName: 'Paneer Soy',
             foodPrice: '180',
-            foodOfferPrice: '99'
+            foodOfferPrice: '160'
                 },
         {
             categoryID: '3',
@@ -138,7 +138,7 @@ var context = {
             foodImage: 'Images/FoodImages/32.JPG',
             foodName: 'Superfood Trail Mix',
             foodPrice: '100',
-            foodOfferPrice: '69'
+            foodOfferPrice: '89'
                 },
         {
             categoryID: '3',
@@ -154,7 +154,7 @@ var context = {
             foodImage: 'Images/FoodImages/41.JPG',
             foodName: 'Ricotta Black Rice',
             foodPrice: '270',
-            foodOfferPrice: '99'
+            foodOfferPrice: '250'
                 }
             ]
 };
@@ -189,5 +189,3 @@ if (window.location.pathname == "/index.html" || window.location.pathname == "/"
     dinner.innerHTML = html3;
     document.getElementById("dinner").appendChild(dinner);
 }
-
-

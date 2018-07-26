@@ -226,7 +226,7 @@ card .bottom-half .last-line {
 }
 
 .product-cart-image {
-    padding: 5px 0 10px 50px;
+    padding: 5px 0 10px 6px;
 }
 
 .product-cart-imageRemove {
@@ -257,6 +257,8 @@ card .bottom-half .last-line {
 .quantity-textbox {
     width: 40px;
     text-align: center;
+    height: 24px;
+   
 }
 
 .order-summary {
@@ -276,14 +278,18 @@ card .bottom-half .last-line {
     font-size: 25px;
     padding-bottom: 20px;
 }
-.u-margin-top-huge-price{
-        margin-top: -4rem !important;
+
+.u-margin-top-huge-price {
+    margin-top: -4rem !important;
     margin-bottom: 6rem;
     float: right;
     margin-right: 3rem;
-
-    
 }
+
+.mrp {
+    text-decoration: line-through;
+}
+
 
 @media only screen and (max-width: 600px) {
     .add-cart {
@@ -325,8 +331,14 @@ card .bottom-half .last-line {
     .price-detail-head {
         padding-left: 0px;
     }
-     .emptycart-image {
+    .emptycart-image {
         padding-left: 20px;
     }
 
+}
+
+@media only screen and (max-width: 1024px) {
+ .product-cart-image {
+    padding: 5px 0 10px 114px;
+}
 }

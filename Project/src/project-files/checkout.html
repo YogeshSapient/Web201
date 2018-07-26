@@ -104,7 +104,7 @@
             var orderitm = JSON.parse(localStorage.getItem('cartItems'))
             $('#order-itm').html("(" + orderitm.length + " items)");
 
-            $('#orderId').html(Math.random().toString(36).substring(7));
+            $('#orderId').html(Math.random().toString(36).substring(7).toUpperCase());
         }
         localStorage.removeItem('TotalAmount');
         localStorage.removeItem('cartItems');
